@@ -1,61 +1,88 @@
-
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>تحميل GTA SA و MTA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>تحميل GTA San Andreas</title>
   <style>
     body {
-      background-color: #0d0d0d;
-      color: #fff;
-      font-family: 'Arial', sans-serif;
+      background: #111;
+      color: white;
+      font-family: 'Tahoma', sans-serif;
       text-align: center;
-      padding: 50px 20px;
+      padding: 50px;
+      margin: 0;
     }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: #1e1e1e;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    }
+
     h1 {
-      color: #ff3c00;
+      margin-bottom: 20px;
     }
-    p {
-      font-size: 18px;
-      margin-bottom: 30px;
-    }
-    .btn {
-      display: inline-block;
-      margin: 10px;
+
+    button {
+      background: #e91e63;
+      color: white;
       padding: 15px 30px;
       font-size: 18px;
       border: none;
       border-radius: 10px;
       cursor: pointer;
-      text-decoration: none;
-      color: white;
-      transition: 0.3s;
+      transition: background 0.3s;
     }
-    .btn-gta {
-      background-color: #d62828;
+
+    button:hover {
+      background: #c2185b;
     }
-    .btn-gta:hover {
-      background-color: #a61d1d;
-    }
-    .btn-mta {
-      background-color: #0077cc;
-    }
-    .btn-mta:hover {
-      background-color: #005fa3;
+
+    #download-link {
+      display: none;
+      margin-top: 30px;
+      font-size: 18px;
+      background: #2ecc71;
+      padding: 15px;
+      border-radius: 10px;
     }
   </style>
 </head>
 <body>
-  <h1>تحميل GTA San Andreas و MTA</h1>
-  <p>للدخول إلى السيرفر الجزائري، قم بتحميل الملفات التالية:</p>
-  <a class="btn btn-gta" href="your-deployment-url.com/f6bbad8
+  <div class="container">
+    <h1>تحميل لعبة GTA San Andreas</h1>
+    <p>يرجى الضغط على الزر وإكمال عرض بسيط لفتح رابط التحميل.</p>
+    <button onclick="openLocker()">فتح التحميل 🔓</button>
 
-  ">🔒 تحميل GTA San Andreas</a>
-  <br>
-  <a class="btn btn-mta" href="https://mtasa.com/download" target="_blank">✅ تحميل MTA</a>
-  <p style="margin-top: 40px; font-size: 16px; color: #ccc;">
-    بعد التحميل، قم بتثبيت GTA SA أولاً، ثم ثبت MTA. بعد ذلك، افتح MTA وأضف السيرفر الجزائري لبدء اللعب.
-  </p>
+    <div id="download-link">
+      ✅ <strong>تم فتح الرابط:</strong><br>
+      <a href="https://your-download-link.com" target="_blank">اضغط هنا لتحميل اللعبة</a>
+    </div>
+  </div>
+
+  <!-- كود AdBlue Locker -->
+  <script type="text/javascript">
+    var XORLZ_IaF_NyIVdc = {"it": 4477182, "key": "ef65b"};
+  </script>
+  <script src="https://d2yc6hxtq0phup.cloudfront.net/414d081.js"></script>
+
+  <!-- التحكم في إظهار الرابط -->
+  <script>
+    function openLocker() {
+      // يفتح الـ Content Locker
+      if (typeof window.unlock !== "undefined") {
+        unlock(); // دالة خاصة بـ AdBlue لفتح الـ locker
+      }
+    }
+
+    // هذه دالة تستدعيها AdBlue بعد إكمال العرض بنجاح
+    function onConversion() {
+      document.getElementById('download-link').style.display = 'block';
+    }
+  </script>
 </body>
 </html>
